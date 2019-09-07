@@ -32,8 +32,8 @@ Quick reference:
 ```
 npm install -g ganache-http-proxy
 npm install -g ganache-cli
-ganache-http-proxy
 ganache-cli -p 8546
+ganache-http-proxy
 ```
 
 ### Code Generators

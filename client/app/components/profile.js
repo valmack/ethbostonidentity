@@ -1,7 +1,9 @@
 import Component from '@ember/component';
 import { computed } from '@ember/object';
+import { inject as service } from '@ember/service';
 
 export default Component.extend({
+  torusLogin: service(),
   size: '',
   isFittedShirt: false,
   isVegan: false,
@@ -18,5 +20,9 @@ export default Component.extend({
       let lastInitial = this.lastName.slice(0, 1)
       return `${this.firstName} ${lastInitial}.`
     }
-  })
+  }),
+  init() {
+    this._super(...arguments);
+    this.torusLogin
+  }
 });

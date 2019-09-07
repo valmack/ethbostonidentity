@@ -4,15 +4,17 @@
   </div>
   <div class="content">
     <div class="ui grid">
+      <img src="images/key-to-happiness-sm.png" alt="conference logo" class="badge-logo">
       <div class="badge-name twelve wide column">
         {{#if nickname}}
           {{nickname}}
         {{else}}
-          Your nickname
+          Nickname
         {{/if}}
+        <p>{{pronouns}}</p>
       </div>
       <div class="badge-qr-code four wide column">
-        {{qr-code text=identity darkColor="#009966"}}
+        {{qr-code text=identity darkColor="#8e017e"}}
       </div>
     </div>
   </div>

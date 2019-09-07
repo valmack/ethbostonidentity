@@ -14,5 +14,6 @@ export default Service.extend({
 		await torus.login(); // await torus.ethereum.enable()
 		const web3 = new Web3(torus.provider);
 		this.set('web3', web3)
+		debugger
 	}
 });
