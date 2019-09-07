@@ -1,3 +1,5 @@
 # Dot files
 .DS_Store
+node_modules
+dist
 
