@@ -1,7 +1,6 @@
 # ETHBoston Front End
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a project for [ETHBoston](https://eth.boston/)
 
 ## Prerequisites
 
@@ -9,8 +8,8 @@ You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
+* [Ganache](https://www.trufflesuite.com/ganache)
 
 ## Installation
 
@@ -20,29 +19,33 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember serve`
+* `npx ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
+## Local development
+
+Follow [these instructions](https://docs.tor.us/developers/getting-started-with-ganache) to get started with Ganache and Torus.
+
 ### Code Generators
 
-Make use of the many generators for code, try `ember help generate` for more details
+Make use of the many generators for code, try `npx ember help generate` for more details
 
 ### Running Tests
 
-* `ember test`
-* `ember test --server`
+* `npx ember test`
+* `npx ember test --server`
 
 ### Linting
 
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+* `npx npm run lint:hbs`
+* `npx npm run lint:js`
+* `npx npm run lint:js -- --fix`
 
 ### Building
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+* `npx ember build` (development)
+* `npx ember build --environment production` (production)
 
 ### Deploying
 
