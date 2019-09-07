@@ -44,9 +44,15 @@
     "eslint-plugin-ember": "^6.2.0",
     "eslint-plugin-node": "^9.0.1",
     "loader.js": "^4.7.0",
-    "qunit-dom": "^0.8.4"
+    "qunit-dom": "^0.8.4",
+    "semantic-ui-ember": "^3.0.3"
   },
   "engines": {
     "node": "8.* || >= 10.*"
+  },
+  "dependencies": {
+    "@toruslabs/torus-embed": "0.0.28",
+    "ember-auto-import": "^1.5.2",
+    "web3": "^1.2.1"
   }
 }

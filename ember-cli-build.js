@@ -5,6 +5,21 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
+    autoImport: {
+      webpack: { 
+        node: {
+          console: false,
+          global: true,
+          process: true,
+          __filename: 'mock',
+          __dirname: 'mock',
+          Buffer: true,
+          setImmediate: true
+      
+          // See "Other node core libraries" for additional options.
+        }
+      }
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
