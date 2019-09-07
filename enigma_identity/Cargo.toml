@@ -5,3 +5,5 @@ authors = ["Val <valmack@protonmail.com>"]
 edition = "2018"
 
 [dependencies]
+eng-wasm = "0.1.4"
+eng-wasm-derive = "0.1.4"
