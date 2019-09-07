@@ -1,6 +1,11 @@
-# Dot files
-.DS_Store
-
 # Compiled
 target/
+build/
+
+# Dot files
+.DS_Store
+.env
+
+# Node
+node_modules/
 
