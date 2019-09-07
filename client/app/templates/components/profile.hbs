@@ -1,8 +1,35 @@
 <div class="row">
-  <h2 class="ui center aligned header">My profile</h2>
+  <h1 class="ui header">My Badge</h1>
 </div>
 
-<div class="ui form profile">
-  <Forms::Name  />
-  <Forms::Size @size={{size}} @isFittedShirt={{isFittedShirt}} />
+<div class="ui grid">
+  <div class="ui column six wide">
+    <Badge @nickname={{nickname}} @identity={{identity}} />
+  </div>
 </div>
+
+
+<div class="row">
+  <h1 class="ui header">Edit Profile</h1>
+</div>
+  <div class="ui fluid card grid padded">
+    <div class="content">
+      <div class="ui form profile">
+        <Forms::Name
+          @firstName={{firstName}}
+          @lastName={{lastName}}
+          @nickname={{nickname}}
+          @pronouns={{pronouns}}
+        />
+        <Forms::Size @size={{size}} @isFittedShirt={{isFittedShirt}} />
+        <Forms::Food 
+          @isVegetarian={{isVegetarian}} 
+          @isVegan={{isVegan}}
+          @isGlutenFree={{isGlutenFree}}
+          @otherDietary={{otherDietary}}
+        />
+      </div>
+    </div>
+  </div>
+
+

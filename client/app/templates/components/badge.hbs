@@ -1,0 +1,19 @@
+<div class="ui raised card fluid">
+  <div class="badge-top">
+    <div class="badge-punch"></div>
+  </div>
+  <div class="content">
+    <div class="ui grid">
+      <div class="badge-name twelve wide column">
+        {{#if nickname}}
+          {{nickname}}
+        {{else}}
+          Your nickname
+        {{/if}}
+      </div>
+      <div class="badge-qr-code four wide column">
+        {{qr-code text=identity darkColor="#009966"}}
+      </div>
+    </div>
+  </div>
+</div>
