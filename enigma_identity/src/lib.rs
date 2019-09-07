@@ -27,4 +27,15 @@ impl IdentityStorage {
         };
         self.identities.push(identity);
     }
+
+    pub fn is_age_at_least(&self, address: String, allowed_age: u64) -> bool {
+        let mut filtered_identity = self.identities
+            .iter()
+            .filter(|&identity| identity.address == address && identity.age  >= allowed_age);
+
+        match filtered_identity.next() {
+            Some(_) => true,
+            None => false
+        }
+    }
 }
