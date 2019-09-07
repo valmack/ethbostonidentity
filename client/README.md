@@ -32,7 +32,7 @@ Quick reference:
 ```
 npm install -g ganache-http-proxy
 npm install -g ganache-cli
-ganache-cli -p 8546
+ganache-cli -p 9545
 ganache-http-proxy
 ```
 

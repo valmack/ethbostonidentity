@@ -33,6 +33,7 @@ h1.ui.header {
 .badge-name {
   font-size: 3rem;
   line-height: 3rem;
+  word-wrap: break-word;
 }
 
 .badge-logo {
@@ -42,5 +43,5 @@ h1.ui.header {
 }
 
 .top-level-container {
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
