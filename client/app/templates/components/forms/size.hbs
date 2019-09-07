@@ -1,0 +1,20 @@
+<div class="fields">
+  <div class="field">
+    <label>Shirt Size</label>
+    {{#ui-dropdown role="searchbox" class="search selection" allowAdditions=true selected=size onChange=(action (mut size)) as |execute mapper|}}
+      <div class="default text">Choose a size</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        {{#each types as |type|}}
+          <div data-value={{map-value mapper type}} class="item">
+            {{type}}
+          </div>
+        {{/each}}
+      </div>
+    {{/ui-dropdown}}
+  </div>
+  <div class="field">
+    <label>Fit</label>
+    {{ui-checkbox class="toggle" label=fit checked=isFittedShirt onChange=(action (mut isFittedShirt))}}
+  </div>
+</div>

@@ -19,7 +19,7 @@ module.exports = function(defaults) {
           // See "Other node core libraries" for additional options.
         }
       }
-    }
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated

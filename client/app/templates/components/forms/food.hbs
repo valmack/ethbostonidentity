@@ -1,0 +1,16 @@
+<h4>Do you have any dietary restrictions?</h4>
+<div class="fields dietary-form">
+  <div class="field">
+    {{ui-checkbox class="toggle" label="Vegetarian" checked=isVegetarian onChange=(action (mut isVegetarian))}}
+  </div>
+  <div class="field">
+    {{ui-checkbox class="toggle" label="Vegan" checked=isVegan onChange=(action (mut isVegan))}}
+  </div>
+  <div class="field">
+    {{ui-checkbox class="toggle" label="Gluten Free" checked=isGlutenFree onChange=(action (mut isGlutenFree))}}
+  </div>
+</div>
+  <div class="field">
+    <label>Other dietary restrictions</label>
+    <input type="text" placeholder="Other food restrictions">
+  </div>
