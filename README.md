@@ -27,6 +27,15 @@ You will need the following things properly installed on your computer.
 
 Follow [these instructions](https://docs.tor.us/developers/getting-started-with-ganache) to get started with Ganache and Torus.
 
+Quick reference:
+
+```
+npm install -g ganache-http-proxy
+npm install -g ganache-cli
+ganache-http-proxy
+ganache-cli -p 8546
+```
+
 ### Code Generators
 
 Make use of the many generators for code, try `npx ember help generate` for more details
