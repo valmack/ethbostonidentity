@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'dapp',
+    modulePrefix: 'eth-boston-frontend',
     environment,
     rootURL: '/',
     locationType: 'auto',
