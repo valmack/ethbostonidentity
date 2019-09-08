@@ -81,21 +81,19 @@ export default Service.extend({
 		await torus.init();
 		await torus.login(); // await torus.ethereum.enable()
 		const web3Torus = new Web3(torus.provider)
-		const web3Enigma = new Web3(new Web3.providers.HttpProvider("http://18.217.190.250:9545"));
-		this.set('web3Enigma', web3Enigma)
 		this.set('web3Torus', web3Torus)
 		let pubKey = await web3Torus.eth.getAccounts();
 		this.set('pubKey', pubKey)
 		this.set('qrAddr', pubKey[0])
 		this.set('isLoggedIn', true)
-		this.initializeEnigmaContract()
+		// const web3Enigma = new Web3(new Web3.providers.HttpProvider("http://18.217.190.250:9545"));
+		// this.set('web3Enigma', web3Enigma)
+		// this.initializeEnigmaContract()
 	},
 	async initializeEnigmaContract() {
 		const enigma = await getEnigmaInit();
 		const accounts = await enigma.web3.eth.getAccounts();
-		console.log(enigma)
-		console.log(accounts)
-	        enigma.admin();
+	  enigma.admin();
 		this.runMil(enigma)
 	},
 	async runMil(enigma) {

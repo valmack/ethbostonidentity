@@ -1,9 +1,4 @@
-{{#unless torusLogin.isLoggedIn}}
-  <div class="row">
-    <h1 class="ui header">Welcome!</h1>
-    <p>Click the blue button in the corner to log in, view your profile, and edit your badge!</p>
-  </div>
-{{else}}
+{{#if torusLogin.qrAddr}}
   <div class="row">
     <h1 class="ui header">My Badge</h1>
   </div>
@@ -48,7 +43,12 @@
         </div>
       </div>
     </div>
-{{/unless}}
+{{else}}
+  <div class="row">
+    <h1 class="ui header">Welcome!</h1>
+    <p>Click the blue button in the corner to log in, view your profile, and edit your badge!</p>
+  </div>
+{{/if}}
 
 <div class="final-section">
 
