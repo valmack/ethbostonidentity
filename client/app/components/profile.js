@@ -12,7 +12,9 @@ export default Component.extend({
   otherDietary: '',
   firstName: '',
   lastName: '',
-  identity: 'http://example.com',
+  identity: computed('pubKey', function() {
+    return this.torusLogin.pubKey[0]
+  }),
   nickname: computed('firstName', 'lastName', function() {
     if (!this.firstName || !this.lastName) {
       return ''
