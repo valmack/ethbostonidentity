@@ -9,7 +9,7 @@
   </div>
 
   <div class="ui grid">
-    <div class="ui column six wide">
+    <div class="ui column badge-width">
       <Badge @nickname={{nickname}} @identity={{torusLogin.qrAddr}} @pronouns={{pronouns}} />
     </div>
   </div>
@@ -20,8 +20,8 @@
   <div>
     {{#each torusLogin.pubKey as |someKey|}}
       <div class="copyable-pub-key">
-        {{someKey}} 
         <button onclick={{action 'copy' someKey}} class="ui button">Copy</button>
+        {{someKey}} 
       </div>
     {{/each}}
   </div>
@@ -49,3 +49,7 @@
       </div>
     </div>
 {{/unless}}
+
+<div class="final-section">
+
+</div>

@@ -50,3 +50,16 @@ h1.ui.header {
 .top-level-container {
   padding-bottom: 50px;
 }
+
+.badge-width {
+  max-width: 500px;
+}
+
+.copyable-pub-key {
+  word-wrap: break-word;
+}
+
+.final-section {
+  /* hack to make the torus button not overlap the form */
+  height: 100px;
+}
