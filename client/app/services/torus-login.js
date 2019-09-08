@@ -68,22 +68,24 @@ const getEnigmaInit = async () => {
 
 
 export default Service.extend({
-  web3: null,
-  web3enigma: null,
-  pubKey: '',
-  privKey: '',
-  addr: '0xc9283cabdbd2f560549ce50c39d14d8b343cc9af',
-  async init() {
+
+	web3Torus: null,
+	web3Enigma: null,
+	pubKey: '',
+	privKey: '',
+	addr: '0xc9283cabdbd2f560549ce50c39d14d8b343cc9af',
+	async init() {
 		this._super(...arguments)
 		const torus = new Torus();
 		await torus.init();
 		await torus.login(); // await torus.ethereum.enable()
-
-		const web3 = new Web3(new Web3.providers.HttpProvider("http://18.217.190.250:9545"));
-		// const web3 = new Web3(torus.provider);
-		this.set('web3', web3)
-		let pubKey = await web3.eth.getAccounts();
+		const web3Torus = new Web3(torus.provider)
+		const web3Enigma = new Web3(new Web3.providers.HttpProvider("http://18.217.190.250:9545"));
+		this.set('web3Enigma', web3Enigma)
+		this.set('web3Torus', web3Torus)
+		let pubKey = await web3Torus.eth.getAccounts();
 		this.set('pubKey', pubKey)
+		this.set('qrAddr', pubKey[0])
 		this.initializeEnigmaContract()
 	},
 	async initializeEnigmaContract() {

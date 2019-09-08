@@ -14,8 +14,11 @@
         <p>{{pronouns}}</p>
       </div>
       <div class="badge-qr-code four wide column">
-        {{qr-code text=identity darkColor="#8e017e"}}
+        {{#if identity}}
+          {{qr-code text=identity darkColor="#8e017e"}}
+        {{/if}}
       </div>
+      {{pubKey}}
     </div>
   </div>
 </div>
