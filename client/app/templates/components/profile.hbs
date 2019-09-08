@@ -20,8 +20,8 @@
   <div>
     {{#each torusLogin.pubKey as |someKey|}}
       <div class="copyable-pub-key">
+        <div>{{someKey}}</div>
         <button onclick={{action 'copy' someKey}} class="ui button">Copy</button>
-        {{someKey}} 
       </div>
     {{/each}}
   </div>

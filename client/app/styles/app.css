@@ -37,6 +37,7 @@ h1.ui.header {
 }
 
 .badge-name .pronouns {
+  padding-top: 24px;
   font-size: 14px;
   color: #666;
 }
@@ -62,4 +63,19 @@ h1.ui.header {
 .final-section {
   /* hack to make the torus button not overlap the form */
   height: 100px;
+}
+
+.home-page {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+body {
+  /* background-color: #e3fcff; */
+}
+
+
+.banner-name {
+  font-family: 'Righteous', sans-serif;
+  font-size: 100px;
 }
