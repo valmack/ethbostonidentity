@@ -56,6 +56,7 @@
   "dependencies": {
     "@toruslabs/torus-embed": "0.0.28",
     "ember-auto-import": "^1.5.2",
+    "enigma-js": "0.0.8",
     "web3": "^1.2.1"
   }
 }
