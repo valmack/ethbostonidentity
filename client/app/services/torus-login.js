@@ -10,6 +10,7 @@ export default Service.extend({
 	pubKey: '',
 	privKey: '',
 	addr: '0xc9283cabdbd2f560549ce50c39d14d8b343cc9af',
+	isLoggedIn: false,
 	async init() {
 		this._super(...arguments)
 		const torus = new Torus();
@@ -22,6 +23,7 @@ export default Service.extend({
 		let pubKey = await web3Torus.eth.getAccounts();
 		this.set('pubKey', pubKey)
 		this.set('qrAddr', pubKey[0])
+		this.set('isLoggedIn', true)
 		this.initializeEnigmaContract()
 	},
 	async initializeEnigmaContract() {

@@ -26,5 +26,10 @@ export default Component.extend({
   init() {
     this._super(...arguments);
     this.torusLogin
+  },
+  actions: {
+    copy(someKey) {
+      navigator.clipboard.writeText(someKey)
+    }
   }
 });

@@ -1,43 +1,51 @@
-<div class="row">
-  <h1 class="ui header">My Badge</h1>
-</div>
-
-<div class="ui grid">
-  <div class="ui column six wide">
-    <Badge @nickname={{nickname}} @identity={{torusLogin.qrAddr}}/>
+{{#unless torusLogin.isLoggedIn}}
+  <div class="row">
+    <h1 class="ui header">Welcome!</h1>
+    <p>Click the blue button in the corner to log in, view your profile, and edit your badge!</p>
   </div>
-</div>
+{{else}}
+  <div class="row">
+    <h1 class="ui header">My Badge</h1>
+  </div>
 
-
-<div class="row">
-  <h1 class="ui header">Edit Profile</h1>
-</div>
-  <div class="ui fluid card grid padded">
-    <div class="content">
-      <div class="ui form profile">
-        <Forms::Name
-          @firstName={{firstName}}
-          @lastName={{lastName}}
-          @nickname={{nickname}}
-          @pronouns={{pronouns}}
-        />
-        <Forms::Size @size={{size}} @isFittedShirt={{isFittedShirt}} />
-        <Forms::Food 
-          @isVegetarian={{isVegetarian}} 
-          @isVegan={{isVegan}}
-          @isGlutenFree={{isGlutenFree}}
-          @otherDietary={{otherDietary}}
-        />
-      </div>
+  <div class="ui grid">
+    <div class="ui column six wide">
+      <Badge @nickname={{nickname}} @identity={{torusLogin.qrAddr}} @pronouns={{pronouns}} />
     </div>
   </div>
 
-<div class="row">
-  <h1 class="ui header">My keys</h1>
-</div>
-<div>
-  {{#each torusLogin.pubKey as |someKey|}}
-  <div>{{someKey}}</div>
-  {{/each}}
-</div>
+  <div class="row">
+    <h1 class="ui header">My Public key</h1>
+  </div>
+  <div>
+    {{#each torusLogin.pubKey as |someKey|}}
+      <div class="copyable-pub-key">
+        {{someKey}} 
+        <button onclick={{action 'copy' someKey}} class="ui button">Copy</button>
+      </div>
+    {{/each}}
+  </div>
 
+  <div class="row">
+    <h1 class="ui header">Edit Profile</h1>
+  </div>
+    <div class="ui fluid card grid padded">
+      <div class="content">
+        <div class="ui form profile">
+          <Forms::Name
+            @firstName={{firstName}}
+            @lastName={{lastName}}
+            @nickname={{nickname}}
+            @pronouns={{pronouns}}
+          />
+          <Forms::Size @size={{size}} @isFittedShirt={{isFittedShirt}} />
+          <Forms::Food 
+            @isVegetarian={{isVegetarian}} 
+            @isVegan={{isVegan}}
+            @isGlutenFree={{isGlutenFree}}
+            @otherDietary={{otherDietary}}
+          />
+        </div>
+      </div>
+    </div>
+{{/unless}}

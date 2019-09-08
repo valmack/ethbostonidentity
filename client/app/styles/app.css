@@ -36,6 +36,11 @@ h1.ui.header {
   word-wrap: break-word;
 }
 
+.badge-name .pronouns {
+  font-size: 14px;
+  color: #666;
+}
+
 .badge-logo {
   margin: 0 auto;
   padding: 10%;
