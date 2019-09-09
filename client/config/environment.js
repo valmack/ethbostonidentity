@@ -26,6 +26,12 @@ module.exports = function(environment) {
     enabled: false
   };
 
+  // config for deploys to gh-pages
+  if (environment === 'production') {
+    ENV.rootURL = '/ethbostonidentity/';
+    ENV.locationType = 'hash';
+  }
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
